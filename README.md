@@ -29,7 +29,7 @@ Returning **one Item** using it's own id
   <br>
 </div>
 
-View of the adding form
+View of **add form**
 <div align="center">
   <img src="img/item_new.png" alt="homepage image" width="600"/>
   <br>
