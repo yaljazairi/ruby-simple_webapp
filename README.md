@@ -13,25 +13,25 @@ You Colud run `shotgun` instead **_For Developing Purposes_** to automatically r
 ## Examples
 View of the **homepage**
 <div align="center">
-  <img src="img/homepage.png" alt="homepage image" width="400"/>
+  <img src="img/homepage.png" alt="homepage image" width="600"/>
   <br>
 </div>
 
 Returning **all Items**
 <div align="center">
-  <img src="img/item_all.png" alt="homepage image" width="400"/>
+  <img src="img/item_all.png" alt="homepage image" width="600"/>
   <br>
 </div>
 
 Returning **one Item** using it's own id
 <div align="center">
-  <img src="img/item_one.png" alt="homepage image" width="400"/>
+  <img src="img/item_one.png" alt="homepage image" width="600"/>
   <br>
 </div>
 
 View of the adding form
 <div align="center">
-  <img src="img/item_new.png" alt="homepage image" width="400"/>
+  <img src="img/item_new.png" alt="homepage image" width="600"/>
   <br>
 </div>
 
