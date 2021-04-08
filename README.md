@@ -2,8 +2,8 @@
 By using this app you can **create new Items** and save them in Database using POST method.
 You can also **return ALL saved Items** or **an Item** by finding it through it's own id.
 
-## Insatllation
-Clone the Repository then open the folder using your terminal.
+## Installation
+Clone the Repository then open the folder and head to `ruby-webapp` using your terminal.
 Run `bundle install`
 
 ## Run
