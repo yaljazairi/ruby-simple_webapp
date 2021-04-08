@@ -1,5 +1,7 @@
 class ItemController < ApplicationController
 
+	# Creating new Items
+
 	get '/items/new' do
 		erb :'/items/new'
 	end
@@ -14,7 +16,23 @@ class ItemController < ApplicationController
 		# # redirect "/items/#{@item.id}"
 		# redirect "/items/#{@item.id}"
 		
-		
+		item = Item.new(params[:item])
+		item.save
+		redirect '/items'
+	end
+
+	# Reading Items
+
+	# Read one Item according to it's id
+	# get '/books/:id' do
+	# 	@item = Item.find(params[:id])
+	# 	erb :show
+	# 	end
+
+	# Read all items in Database
+	get '/items' do
+		@items = Item.all()
+		erb :'items/index'
 	end
 
 
