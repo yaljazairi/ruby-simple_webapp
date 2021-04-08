@@ -13,10 +13,16 @@
     <h4 class="pt-4">Sinatra Homepage</h4><br>
     <div style="text-align: center;">
 				<%# rackup localhost:9292 --- when using shotgun change port to 9393 %>
+				<%# rackup port: 9292 %>
         <a href="http://localhost:9292/items" role="button" class="btn btn-sm btn-success">Get all Items</a>
         <p>Wanna add your own Items ?</p>
 				<a href="http://localhost:9292/items/new" role="button" class="btn btn-sm btn-info">Create new Item</a>
-	
+				
+				<%# shotgun port:9393 %>
+				<%# <a href="http://localhost:9292/items" role="button" class="btn btn-sm btn-success">Get all Items</a>
+        <p>Wanna add your own Items ?</p>
+				<a href="http://localhost:9292/items/new" role="button" class="btn btn-sm btn-info">Create new Item</a> %>
+
         </form>
     </div>
 
