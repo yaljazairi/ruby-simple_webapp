@@ -13,7 +13,6 @@ class ItemController < ApplicationController
 		# 	price: params[:price],
 		# )
 		# # binding.pry
-		# # redirect "/items/#{@item.id}"
 		# redirect "/items/#{@item.id}"
 		
 		item = Item.new(params[:item])
