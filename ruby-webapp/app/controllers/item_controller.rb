@@ -24,10 +24,10 @@ class ItemController < ApplicationController
 	# Reading Items
 
 	# Read one Item according to it's id
-	# get '/books/:id' do
-	# 	@item = Item.find(params[:id])
-	# 	erb :show
-	# 	end
+	get '/items/:id' do
+		@item = Item.find(params[:id])
+		erb :'items/show'
+		end
 
 	# Read all items in Database
 	get '/items' do
