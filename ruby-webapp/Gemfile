@@ -12,6 +12,7 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'solargraph'
+gem 'rack'
 
 group :test do
   gem 'rspec'
