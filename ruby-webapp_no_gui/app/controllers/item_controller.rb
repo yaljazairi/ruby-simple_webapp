@@ -30,6 +30,7 @@ class ItemController < ApplicationController
 	get '/items/:id' do
 		@item = Item.find(params[:id])
 		# erb :'items/show'
+			return (@item).to_json
 		end
 
 	# << Read all items in Database >>
