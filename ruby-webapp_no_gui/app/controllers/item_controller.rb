@@ -4,10 +4,11 @@ class ItemController < ApplicationController
 
 	get '/items/new' do
 		# erb :'/items/new'
-		item = {
-			name: params[:name],
-			price: params[:price]
-		}
+		# item = {
+		# 	name: params[:name],
+		# 	price: params[:price]
+		# }
+		# item = JSON.parse(request.body.read)
 	end
 
 	post '/items' do
@@ -19,11 +20,20 @@ class ItemController < ApplicationController
 		# # binding.pry
 		# redirect "/items/#{@item.id}"
 		
-		item = Item.new(params[:item])
-		item.save
-		redirect '/items'
-	end
+		# item = {
+		# 	name: params[:name],
+		# 	price: params[:price]
+		# }
+		# new_item = Item.new(params[:item])
+		# new_item.save
+		# puts "new item is added successfully".to_s
+		# # redirect '/items'
 
+		@data = JSON.parse(request.body.read)
+		@item = Item.new(name: @data['name'], price: @data['price'])
+		@item.save
+
+	end
 	# <=== Reading Items ====>
 
 	# << Read one Item according to it's id >>
