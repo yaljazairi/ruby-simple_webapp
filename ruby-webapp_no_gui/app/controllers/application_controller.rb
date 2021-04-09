@@ -1,4 +1,5 @@
 require './config/environment'
+require 'json'
 
 class ApplicationController < Sinatra::Base
 
@@ -9,7 +10,8 @@ class ApplicationController < Sinatra::Base
 
   get "/" do
     # erb :welcome
-		erb :my_welcome
-  end
+		# erb :my_welcome
+		wlcm = "Homepage".to_s
+  end.to_json
 
 end

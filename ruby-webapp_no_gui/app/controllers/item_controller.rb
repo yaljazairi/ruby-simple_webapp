@@ -3,7 +3,11 @@ class ItemController < ApplicationController
 	# <=== Creating new Items ===>
 
 	get '/items/new' do
-		erb :'/items/new'
+		# erb :'/items/new'
+		item = {
+			name: params[:name],
+			price: params[:price]
+		}
 	end
 
 	post '/items' do
@@ -25,13 +29,17 @@ class ItemController < ApplicationController
 	# << Read one Item according to it's id >>
 	get '/items/:id' do
 		@item = Item.find(params[:id])
-		erb :'items/show'
+		# erb :'items/show'
 		end
 
 	# << Read all items in Database >>
 	get '/items' do
 		@items = Item.all()
-		erb :'items/index'
+		# erb :'items/index'
+		@items.each do |item|
+			item.name
+			item.price
+		end.to_json
 	end
 	
 end
