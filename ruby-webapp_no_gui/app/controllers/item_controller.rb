@@ -2,14 +2,14 @@ class ItemController < ApplicationController
 
 	# <=== Creating new Items ===>
 
-	get '/items/new' do
+	# get '/items/new' do
 		# erb :'/items/new'
 		# item = {
 		# 	name: params[:name],
 		# 	price: params[:price]
 		# }
 		# item = JSON.parse(request.body.read)
-	end
+	# end
 
 	post '/items' do
 		# "Process the form"
@@ -20,15 +20,6 @@ class ItemController < ApplicationController
 		# # binding.pry
 		# redirect "/items/#{@item.id}"
 		
-		# item = {
-		# 	name: params[:name],
-		# 	price: params[:price]
-		# }
-		# new_item = Item.new(params[:item])
-		# new_item.save
-		# puts "new item is added successfully".to_s
-		# # redirect '/items'
-
 		@data = JSON.parse(request.body.read)
 		@item = Item.new(name: @data['name'], price: @data['price'])
 		@item.save
