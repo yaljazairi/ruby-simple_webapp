@@ -35,3 +35,17 @@ View of **add form**
   <br>
 </div>
 
+# no_GUI
+In case you wanted to use curl in your terminal and get your data back as JSON, you need to use the modified no_GUI version of the Webapp.
+to do so head to `ruby-webapp_no_gui`. Run `bundle install`.<br>
+Now you can GET and POST your JSON data as following:<br>
+
+### Return all Items as JSON
+`curl localhost:9292/items`
+
+### Return one Item as JSON
+`curl localhost:9292/items/id_of_the_item`
+
+### Post an Item as JSON 
+`curl -X POST http://localhost:9393/items -d '{"name": "Test", "price": 123}'`
+
