@@ -1,0 +1,9 @@
+set -e -x
+
+tar xzf libyaml_0.2.5/yaml-0.2.5.tar.gz
+pushd yaml-0.2.5
+  ./configure --prefix=${BOSH_INSTALL_TARGET}
+
+  make
+  make install
+popd

@@ -1,0 +1,11 @@
+---
+name: ruby_2.6.3
+
+dependencies:
+- libyaml_0.2.5
+
+files:
+- ruby_2.6.3/ruby-2.6.3.tar.gz #From https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz
+- ruby_2.6.3/rubygems-3.2.16.tgz #From https://rubygems.org/rubygems/rubygems-3.2.16.tgz
+- ruby_2.6.3/bundler-1.2.1.gem #From https://rubygems.org/downloads/bundler-1.2.1.gem
+

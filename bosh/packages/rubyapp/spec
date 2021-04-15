@@ -1,0 +1,9 @@
+---
+name: rubyapp
+
+dependencies:
+- ruby_2.6.3
+
+files:
+- rubyapp/**/*
+
