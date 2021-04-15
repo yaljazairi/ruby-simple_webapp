@@ -1,0 +1,7 @@
+---
+name: libyaml_0.2.5
+
+dependencies: []
+
+files:
+	- libyaml_0.2.5/yaml-0.2.5.tar.gz # From https://pyyaml.org/download/libyaml/yaml-0.2.5.tar.gz
