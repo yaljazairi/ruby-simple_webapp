@@ -3,10 +3,11 @@ By using this app you can **create new Items** and save them in Database using P
 You can also **return ALL saved Items** or **an Item** by finding it through it's own id.
 The App is based on **MVC Architecture** using **_corneal_** Rails like template.
 
-# Index
-1. [GUI-Version](https://github.com/yaljazairi/ruby-simple_webapp#installation)
-2. [no_GUI_Version](https://github.com/yaljazairi/ruby-simple_webapp#no_gui_version)
+## Index
+1. [GUI_Version](#GUI_Version(ruby-webapp))
+2. [no_GUI_Version](#no_gui_version)
 
+# 1. GUI_Version(ruby-webapp)
   
 ## Installation
 Clone the Repository then open the folder and head to `ruby-webapp` using your terminal.
