@@ -5,10 +5,9 @@ The App is based on **MVC Architecture** using **_corneal_** Rails like template
 
 # Index
 1. [GUI-Version](https://github.com/yaljazairi/ruby-simple_webapp#installation)
-2. no_GUI_Version
+2. [no_GUI_Version](https://github.com/yaljazairi/ruby-simple_webapp#no_gui_version)
 
   
-
 ## Installation
 Clone the Repository then open the folder and head to `ruby-webapp` using your terminal.
 Run `bundle install`
