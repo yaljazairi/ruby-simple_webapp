@@ -6,7 +6,7 @@ The App is based on **MVC Architecture** using **_corneal_** Rails like template
 ## Index
 1. [GUI_Version](#1-gui_version)
 2. [no_GUI_Version](#2-no_gui_version)
-3. [BOSH_Verion](#3-bosh_version)
+3. [BOSH_Version](#3-bosh_version)
 
 # 1. GUI_Version
   
@@ -58,3 +58,5 @@ Now you can GET and POST your JSON data as following:<br>
 `curl -X POST http://localhost:9393/items -d '{"name": "Test", "price": 123}'`
 
 # 3. BOSH_Version
+The BOSH version of the no_GUI variant is ready to be released and deployed.<br>
+Use `cd bosh` to find the version under bosh directory.
