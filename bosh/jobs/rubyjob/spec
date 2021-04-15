@@ -7,4 +7,7 @@ packages:
 - rubyapp
 - ruby_2.6.3
 
-properties: {}
+properties:
+	port:
+    description: Port that ruby app listens on
+    default: 80
