@@ -4,10 +4,10 @@ You can also **return ALL saved Items** or **an Item** by finding it through it'
 The App is based on **MVC Architecture** using **_corneal_** Rails like template.
 
 ## Index
-1. [GUI_Version](#GUI_Version(ruby-webapp))
-2. [no_GUI_Version](#no_gui_version)
+1. [GUI_Version](#1-gui_version)
+2. [no_GUI_Version](#2-no_gui_version)
 
-# 1. GUI_Version(ruby-webapp)
+# 1. GUI_Version
   
 ## Installation
 Clone the Repository then open the folder and head to `ruby-webapp` using your terminal.
@@ -42,7 +42,7 @@ View of **add form**
   <br>
 </div>
 
-# no_GUI_Version
+# 2. no_GUI_Version
 In case you wanted to use curl in your terminal and get your data back as JSON, you need to use the modified no_GUI version of the Webapp.
 to do so head to `ruby-webapp_no_gui`. Run `bundle install`.<br>
 Now you can GET and POST your JSON data as following:<br>
