@@ -1,0 +1,30 @@
+# Run:  docker-compose up   # Concourse dockerfile
+#       fly -t tutorial sp -p rubyapp-docker-pipeline -c pipeline.yml -l credentials.yml
+#       fly -t tutorial up -p rubyapp-docker-pipeline
+#       fly -t tutorial trigger-job -j rubyapp-docker-pipeline/publish-rubyapp -w 
+# Check http://127.0.0.1:8080/
+
+resources:
+- name: ruby-webapp-pipeline
+  type: git
+  source:
+    uri: https://github.com/yaljazairi/ruby-webapp-boshrelease
+    branch: dev
+
+- name: rubyapp-docker-image
+  type: docker-image
+  source:
+    username: ((dockerhub-username))
+    password: ((dockerhub-password))
+    repository: ((dockerhub-username))/rubyapp-concourse
+
+
+jobs:
+- name: publish-rubyapp
+  public: true
+  serial: true
+  plan:
+  - get: ruby-webapp-pipeline
+  - put: rubyapp-docker-image
+    params:
+      build: ruby-webapp-pipeline/src/rubyapp

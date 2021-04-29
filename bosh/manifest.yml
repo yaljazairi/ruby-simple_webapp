@@ -1,0 +1,30 @@
+---
+name: rubyapp
+
+releases:
+- name: rubyapp
+  version: 1+dev.1619099911         # Version after bosh create-release --force --timestamp-version
+  # url: git+https://github.com/yaljazairi/ruby-webapp-boshrelease
+
+stemcells:
+- alias: default
+  os: ubuntu-xenial
+  version: 621.117
+
+instance_groups:
+- name: rubyapp
+  instances: 1
+  azs: [z1, z2]
+  jobs:
+    - name: rubyjob
+      release: rubyapp
+  stemcell: default
+  vm_type: medium
+  networks:                        # bosh cloud-config
+  - name: dynamic
+
+update:
+  canaries: 1
+  max_in_flight: 10
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000

@@ -1,0 +1,5 @@
+check process rubyjob
+  with pidfile /var/vcap/sys/run/rubyjob/pid
+  start program "/var/vcap/jobs/rubyjob/bin/ctl start"
+  stop program "/var/vcap/jobs/rubyjob/bin/ctl stop"
+  group vcap

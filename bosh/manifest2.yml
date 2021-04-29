@@ -1,0 +1,34 @@
+---
+name: rubyapp
+
+features:
+  randomize_az_placement: true
+instance_groups:
+- azs: [z1, z2, z3]
+  name: rubyapp
+  instances: 1
+  jobs:
+  - name: rubyjob
+    release: rubyapp
+    properties:
+      port: 5556
+  
+  networks:
+  - name: dynamic
+  persistent_disk_type: a9svs-postgresql-single-small
+  stemcell: ubuntu-xenial
+  vm_type: small
+
+releases:
+- name: rubyapp
+  version: 1+dev.1619431331
+stemcells:
+- alias: ubuntu-xenial
+  os: ubuntu-xenial
+  version: "621.90"
+update:
+  canaries: 1
+  canary_watch_time: 30000-600000
+  max_in_flight: 1
+  serial: true
+  update_watch_time: 5000-600000

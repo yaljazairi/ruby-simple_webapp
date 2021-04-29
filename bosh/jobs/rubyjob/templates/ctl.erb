@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e -x
+
+RUN_DIR=/var/vcap/sys/run/rubyjob
+LOG_DIR=/var/vcap/sys/log/rubyjob
+PIDFILE=${RUN_DIR}/pid
+
+case $1 in
+
+  start)
+    touch $PIDFILE
+    mkdir -p $RUN_DIR $LOG_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR $PIDFILE
+
+    cd /var/vcap/packages/rubyapp
+
+    source /var/vcap/packages/ruby-2.6.7-r0.42.0/bosh/runtime.env
+    
+    bundle exec rackup -p <%= p('port') %> --host <%= p('host') %> \
+      >>  $LOG_DIR/rubyjob.stdout.log \
+      2>> $LOG_DIR/rubyjob.stderr.log
+
+    # Getting PID from process list and writing it to the PIDFILE
+    $(ps -elf | grep rackup | grep -v grep | awk '{print $4}') > $PIDFILE
+
+    ;;
+
+  stop)
+    kill -9 `cat $PIDFILE`
+    rm -f $PIDFILE
+
+    ;;
+
+  *)
+    echo "Usage: ctl {start|stop}" ;;
+
+esac

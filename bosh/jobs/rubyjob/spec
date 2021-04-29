@@ -1,0 +1,18 @@
+---
+name: rubyjob
+
+templates:
+  ctl.erb: bin/ctl
+  config.erb: bin/config.yml
+  
+packages:
+- ruby-2.6.7-r0.42.0
+- rubyapp
+
+properties:
+  port:
+    description: "Port that ruby app listens on"
+    default: 8080
+  host:
+    description: "Bind address"
+    default: 0.0.0.0
