@@ -1,7 +1,0 @@
----
-#name: bosh
-name: rubyapp
-blobstore:
-  provider: local
-  options:
-    blobstore_path: /tmp/ruby-blobs
