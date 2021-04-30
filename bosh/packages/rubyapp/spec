@@ -1,7 +1,0 @@
----
-name: rubyapp
-dependencies:
-- ruby-2.6.7-r0.42.0
-
-files:
-- rubyapp/**/*
